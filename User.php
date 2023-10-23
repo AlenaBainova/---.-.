@@ -2,7 +2,7 @@
 
 class User
 {
-    private ?\DateTimeImmutable $createdAt;
+    public ?DateTimeImmutable $createdAt;
 
     public function __construct(
         private readonly string $login,
@@ -14,7 +14,7 @@ class User
         $this->createdAt = $createdAt;
 
         if (null === $this->createdAt) {
-            $this->createdAt = new \DateTimeImmutable();
+            $this->createdAt = new DateTimeImmutable();
         }
     }
 
